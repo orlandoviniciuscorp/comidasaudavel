@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','Home@index')->name('home.index');
+
 Route::get('/producers', 'Producers@index')->name('producers.index');
 
 
