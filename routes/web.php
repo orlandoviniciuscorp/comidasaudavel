@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/producers', 'Producers@index')->name('producers.index');
+
+
