@@ -10,22 +10,21 @@
     </div>
 @endif
 
-<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+<table id="producer_table" class="table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
     <tr>
-        <th>Nome</th>
-        <th>Tribunal</th>
-        <th>Tipo juiz</th>
+        <th>#</th>
+        <th>Produtor</th>
     </tr>
     </thead>
 
-    {{--@forelse ($juizes as $juiz)--}}
-        {{--<tr>--}}
-            {{--<td><a href="{{ route('juizes.show', ['id' => $juiz->id]) }} ">{{ is_null($juiz->nome) ? : $juiz->nome }}</a></td>--}}
-            {{--<td>{{ is_null($juiz->lotacao->nome) ? : $juiz->lotacao->nome }}</td>--}}
-            {{--<td>{{ is_null($juiz->tipojuiz->nome) ? : $juiz->tipojuiz->nome }}</td>--}}
-        {{--</tr>--}}
-    {{--@empty--}}
-        {{--<p>Nenhum juiz encontrado</p>--}}
-    {{--@endforelse--}}
+    @forelse ($producers as $producer)
+        <tr>
+
+            <td><a href="{{ route('producers.show', ['id' => $producer->id]) }} ">{{$producer->id}}</a></td>
+            <td>{{ is_null($producer->name) ? : $producer->name }}</td>
+        </tr>
+    @empty
+        <p>Nenhum Produtor encontrado</p>
+    @endforelse
 </table>

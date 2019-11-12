@@ -1,5 +1,7 @@
 <!-- Authentication Links -->
-    <li><a href="{{ route('home.index') }}">Processos</a></li>
+    <li><a href="{{ route('home.index') }}">Home</a></li>
+
+    <li><a href="{{ route('baskets.index') }}">Cestas</a></li>
 
         <li><a href="">Agenda</a></li>
 
@@ -10,16 +12,8 @@
         </a>
 
         <ul class="dropdown-menu">
-            <li><a href="">Agenda</a></li>
-            <li><a href="">Andamentos</a></li>
-            <li><a href="">Tribunais</a></li>
-            <li><a href="">Buscas em Tribunais</a></li>
-            <li><a href="">Juizes</a></li>
-            <li><a href="">Ações</a></li>
-            <li><a href="">Revisões</a></li>
-            <li><a href="">Leis</a></li>
-            <li><a href="">Termos para Busca</a></li>
-
+            <li><a href="{{route('producers.index')}}">Produtores</a></li>
+            <li><a href="">Produtos</a></li>
 
             <li><a href="">Usuários</a></li>
         </ul>
